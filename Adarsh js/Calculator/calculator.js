@@ -17,6 +17,17 @@ app.post("/",(req,res)=>{
     res.send("The calculation of num1 and num2 is "+c);
 });
 
+app.get("/bmicalculator",(req,res)=>{
+    res.sendFile(__dirname+"/bmicalculator.html");
+})
+app.post("/bmicalculator",(req,res)=>{
+    let weight=parseFloat(req.body.weight);
+    let height=parseFloat(req.body.height);
+    let bmi =weight/(height*height);
+
+    res.send("you bmi is "+bmi);
+
+})
 app.listen(3000,()=>{
     console.log("Server stated on port 3000")
 });
