@@ -30,3 +30,10 @@ let marks={
 // to print element of string we can print using like arrays
 let ab ="adarsh"
 console.log(ab[0])
+
+
+function pge(an,jf){
+    return new Promise(( rej,res)=>{
+      let resume=resdj;
+    })
+}
